@@ -247,6 +247,11 @@ a{
 }
 .blogClass{
     background:#a660b7 ;
+    display: block;
+    /*width:40px;*/
+    /*height: 40px;*/
+    color: #ffffff;
+    cursor: pointer;
 }
 .blogContent{
     margin-bottom: 20px;
