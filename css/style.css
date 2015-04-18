@@ -84,6 +84,7 @@ a{
 .nesContent{
     width: 340px;
     padding: 10px;
+    height: 100px;
     float: right;
     background-color: #fff;
     color: #fff;
