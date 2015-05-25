@@ -114,15 +114,14 @@ a{
 .block{
     background: #fff;
     line-height: 1.7;
-    width: 320px;
+    width: 485px;
     float: left;
     margin-right: 10px;
-
     padding-bottom:5000px; margin-bottom:-5000px;
 }
 .block img{
-    width: 300px;
-    height: 100px;
+    width: 466px;
+    height:350px;
     padding: 10px;
 }
 .block .blockContent{
@@ -646,7 +645,7 @@ a{
     line-height: 23px;
 }
 .tagContent .schedule{
-    height: 80px;
+    height: 60px;
     margin-left: 40px;
     margin-top: 10px;
 }
