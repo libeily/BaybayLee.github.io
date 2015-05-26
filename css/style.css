@@ -488,16 +488,16 @@ a{
     display: block;
     margin-top: 10px;
 }
-.tabBlock .text1{
+ .text1{
     background-color:#522a5c ;
 }
-.tabBlock .text2{
+.text2{
     background-color:#8c2300 ;
 }
-.tabBlock .text3{
+ .text3{
     background-color: #5900b2;
 }
-.tabBlock .text4{
+ .text4{
     background-color: #d9a300;
 }
 .tabBlock img{

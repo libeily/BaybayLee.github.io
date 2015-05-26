@@ -29,14 +29,22 @@
                     <div class="blogTimer">BaybayLee</div>
                     <a href="javaScriptIndex.html"class="blogClass">JavaScript</a>
                 </div>
-                <h1 class="cssTitle">JavaScript Index</h1>
-                <ul class="cssIndexContent">
-                    <li><a href="js-prototype.html">原型理解</a></li>
-                    <li><a href="js-prototype-constructor.html">js原型和构造函数的理解</a></li>
-                    <li><a href="#">等高自适应</a></li>
-                    <li><a href="#">等高自适应</a></li>
-                    <li><a href="#">等高自适应</a></li>
-                </ul>
+                <h1 class="cssTitle">js原型和构造函数的理解</h1>
+                <div class="cssIndexContent">
+                    <p>除了创建对象，构造函数(constructor) 还做了另一件有用的事情—自动为创建的新对象设置了原型对象(prototype object) 。
+                        原型对象存放于 ConstructorFunction.prototype属性中， 也就是构造函数的prototype属性中。</p>
+                    <img src="jsImg/js-prototype.png" alt="" style="width: 100%"/>
+                    <p>以上代码的prototype可以表示为下图：</p>
+                    <img src="jsImg/js-prototype(2).png" alt=""/>
+                    <p>上述图示可以看出，每一个object都有一个prototype. 构造函数Foo也拥有自己的__proto__, 也就是Function.prototype,
+                        而Function.prototype的__proto__指向了Object.prototype. <strong>重申一遍，Foo.prototype只是一个显式的属性，也就是b和c的__proto__属性。</strong>  </p>
+
+                        <p>参考资料：</p>
+                    <li><a href="http://www.nowamagic.net/librarys/veda/detail/1642">JavaScript探秘：构造函数 Constructor</a></li>
+                    <li><a href="http://dmitrysoshnikov.com/ecmascript/javascript-the-core/">Javascript.The Core</a></li>
+                    <!--<li><a href="http://www.nowamagic.net/librarys/veda/detail/1648">JavaScript探秘：强大的原型和原型链</a></li>-->
+
+                </div>
             </div>
         </div>
         <div class="rightGuide">
