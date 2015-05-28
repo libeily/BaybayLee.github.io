@@ -3,21 +3,21 @@
 <head lang="en">
     <meta http-equiv="Content-Type" charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
     <title>First task of html css</title>
-    <link rel="stylesheet" href="../../../css/reset.css"/>
-    <link rel="stylesheet" href="../../../css/style.css"/>
-    <link rel="stylesheet" href="../../../css/cssIndex.css"/>
+    <link rel="stylesheet" href="../../../../css/reset.css"/>
+    <link rel="stylesheet" href="../../../../css/style.css"/>
+    <link rel="stylesheet" href="../../../../css/cssIndex.css"/>
 </head>
 <body>
 <div class="wrapper">
     <div class="header">
-        <a  class="gitIcon" href="https://github.com/"><img src="../../../img/icon-github.png" alt=""/></a>
+        <a  class="gitIcon" href="https://github.com/"><img src="../../../../img/icon-github.png" alt=""/></a>
         <div class="containe title nav ">
             <p class="myIcon">BaybayLee</p>
             <ul>
-                <li><a href="../../../index.html">首页</a></li>
-                <li><a href="../../blog.html">文章</a></li>
-                <li><a href="../../../gallery.html">作品</a></li>
-                <li><a href="../../../about.html">关于</a></li>
+                <li><a href="../../../../index.html">首页</a></li>
+                <li><a href="../../../blog.html">文章</a></li>
+                <li><a href="../../../../gallery.html">作品</a></li>
+                <li><a href="../../../../about.html">关于</a></li>
             </ul>
         </div>
     </div>
@@ -27,22 +27,49 @@
             <div class="blog blogIndex">
                 <div class="tag">
                     <div class="blogTimer">BaybayLee</div>
-                    <a href="javaScriptIndex.html"class="blogClass">JavaScript</a>
+                    <a href="../javaScriptIndex.html"class="blogClass">JavaScript</a>
                 </div>
-                <h1 class="cssTitle">js原型和构造函数的理解</h1>
+                <h1 class="cssTitle">js原型的理解</h1>
                 <div class="cssIndexContent">
-                    <p>除了创建对象，构造函数(constructor) 还做了另一件有用的事情—自动为创建的新对象设置了原型对象(prototype object) 。
-                        原型对象存放于 ConstructorFunction.prototype属性中， 也就是构造函数的prototype属性中。</p>
-                    <img src="jsImg/js-prototype.png" alt="" style="width: 100%"/>
-                    <p>以上代码的prototype可以表示为下图：</p>
-                    <img src="jsImg/js-prototype(2).png" alt=""/>
-                    <p>上述图示可以看出，每一个object都有一个prototype. 构造函数Foo也拥有自己的__proto__, 也就是Function.prototype,
-                        而Function.prototype的__proto__指向了Object.prototype. <strong>重申一遍，Foo.prototype只是一个显式的属性，也就是b和c的__proto__属性。</strong>  </p>
+                    <p>Js所有的函数都有一个prototype属性，在js中可以记为：_proto_,这个属性引用了一个对象，即原型对象，
+                        也简称原型,按照字面意思来理解，那么prototype就是通过调用构造函数而创建的那个对象实例的原型对象。</p>
+                    <p>只要创建一个新函数，就会根据一组特定的规则为该函数创造一个prototype的属性，指向函数的原型对象。默认情况下，所有原型对象都会自动获得一个constructor属性，这个属性包含一个指向prototype属性所在函数的指针，
+                        而通过这个构造函数，可以继续为原型对象添加其他属性和方法。</p>
+                    <p>创建自定义的构造函数之后，其原型对象默认只会取得constructor属性，其他方法，将从object继承得。调用构造函数创建的第一个实例后，该实例的内部将包含一个指针
+                        （__proto__ 属性，指向构造函数的原型对象</p>
+                    <p>每个函数内部的__proto__指向构造他们的函数的prototype.</p>
+                    <p>
+                        function   A(x){
+                        this.x=x;
+                        }
+                       <p>  var obj=new A(1);</p>
+                    </p>
+                    <ul>
+                        <li>
+                            obj.constructor指向了创建该实例的函数的构造函数
+                            obj.constructor== function A(x){this.x=s;}
+                        </li>
+                        <li>
+                            obj.__proto__;//obj.__proto__指向的是构造他的函数A的原型对象
+                            obj.__proto__==A{};
+                        </li>
+                        <li>
+                            A.prototype==A{};
+                        </li>
+                        <li>
+                            A.protoype.constructor指向了A的构造函数
+                            A.protoype.constructor==function A(x){this.x=x;}
+                        </li>
+                    </ul>
+                    <p>也就是obj.constructor===A.prototype.constructor (这个是永远成立的，即使A.prototype不再指向原来的A原型，
+                        也就是说：类的实例对象的constructor属性永远指向"构造函数"的prototype.constructor)</p>
+                    <p>
+                        参考资料：
+                        <li><a href="http://www.jb51.net/article/30750.htm">js原型链原理看图说明</a></li>
+                        <li><a href="http://blog.jobbole.com/9648/">理解JavaScript原型</a></li>
+                        <li><a href="http://www.nowamagic.net/librarys/veda/detail/1648">JavaScript探秘：强大的原型和原型链</a></li>
+                    </p>
 
-                        <p>参考资料：</p>
-                    <li><a href="http://www.nowamagic.net/librarys/veda/detail/1642">JavaScript探秘：构造函数 Constructor</a></li>
-                    <li><a href="http://dmitrysoshnikov.com/ecmascript/javascript-the-core/">Javascript.The Core</a></li>
-                    <!--<li><a href="http://www.nowamagic.net/librarys/veda/detail/1648">JavaScript探秘：强大的原型和原型链</a></li>-->
 
                 </div>
             </div>
@@ -54,10 +81,10 @@
             </div>
             <div class="classification">
                 <ul>
-                    <li><a href="../htmlIndex/htmlIndex.html" class="title">HTML</a></li>
-                    <li><a href="../cssIndex/cssIndex.html" class="title">CSS</a></li>
-                    <li><a href="../javaScriptIndex/javaScriptIndex.html" class="title">JavaScript</a></li>
-                    <li><a href="../othersIndex/othersIndex.html" class="title">其他文章</a></li>
+                    <li><a href="../../htmlIndex/htmlIndex.html" class="title">HTML</a></li>
+                    <li><a href="../../cssIndex/cssIndex.html" class="title">CSS</a></li>
+                    <li><a href="../javaScriptIndex.html" class="title">JavaScript</a></li>
+                    <li><a href="../../othersIndex/othersIndex.html" class="title">其他文章</a></li>
                 </ul>
             </div>
             <div class="calendar">
@@ -112,10 +139,10 @@
     </div>
     <div class="footer">
         <h3>
-            <a href="../../../index.html">主页</a>
-            <a href="../../blog.html">文章</a>
-            <a href="../../../gallery.html">作品</a>
-            <a href="../../../about.html">关于</a>
+            <a href="../../../../index.html">主页</a>
+            <a href="../../../blog.html">文章</a>
+            <a href="../../../../gallery.html">作品</a>
+            <a href="../../../../about.html">关于</a>
         </h3>
         <div class="containe">
             <div class="footerBlock">
@@ -172,7 +199,7 @@
         </div>
         <div class="copyRight">
             <h4>版权所有</h4>
-            <img src="../../../img/icon-github.png" alt=""/>
+            <img src="../../../../img/icon-github.png" alt=""/>
         </div>
     </div>
 </div>
